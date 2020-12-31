@@ -1,1 +1,4 @@
 
+var questions:
+
+var timer

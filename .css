@@ -1,4 +1,4 @@
-/* out of box */
+/* border of box */
 #box {
     position: absolute;
     left: 30%;
@@ -11,12 +11,16 @@
 #startTime {
     background-color: rgba(23, 92, 221, 0.932);
     margin-left: 33%;
-    padding: 15px 32px;
+    padding: 15px 30px;
     font-size: 20px;
     color: white;
 }
 #questionsDiv {
     margin: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: white;
+    
+    
 }
 
 #currentTime {
@@ -26,7 +30,7 @@
 #goBack {
     background-color: rgba(23, 92, 221, 0.932);
     position: relative;
-    padding: 10px;
+    padding: 5px;
     font-size: 20px;
     color: white;
     top: 30%;
@@ -34,6 +38,7 @@
     width: auto;
     text-align: center;
     text-decoration: none;
+    
 }
 
 
@@ -41,7 +46,7 @@
 #clear {
     background-color: rgba(23, 92, 221, 0.932);
     position: relative;
-    padding: 10px;
+    padding: 5px;
     font-size: 20px;
     color: white;
     top: 30%;
@@ -142,9 +147,10 @@ a {
 }
  body {
     background-image: url(https://img.freepik.com/free-vector/blue-cyber-future-technology-concept-background_42077-488.jpg?size=626&ext=jpg);
-    background-color: #cccccc;
+    background-color: #cccccc00;
  }
 
  #highscores {
      color:rgba(255, 255, 255, 0.932);
+     margin:20px;
  }
