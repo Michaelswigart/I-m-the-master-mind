@@ -79,7 +79,7 @@ const questionsIndex
 
 
 
-for (let index = 0; index < array.length; index++) {
-    const element = array[index];
+for (let index = 0; index <questionsIndex.length; index++) {
+    const question = question[index];
     
 }

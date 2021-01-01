@@ -1,24 +1,10 @@
-//   Elements 
+// Michael Swigart Homework Code Quiz
+//   Declared const 
+const scores  = document.getElementById("#score")
 
-const start  = document.getElementById
+const clear  = document.getElementById("#clear")
 
-const currentTime = document.getElementById
+const goback  = document.getElementById("#goBack")
 
-const choicesUl = document.getElementById
 
-const highscores = document.getElementById
-
-const  = document.getElementById
-
-const  = document.getElementById
-
-const  = document.getElementById
-
-const  = document.getElementById
-
-const  = document.getElementById
-
-const  = document.getElementById
-
-const  = document.getElementById
 
