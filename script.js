@@ -1,8 +1,7 @@
 startTime 
 var startButton = document.getElementById("startTime");
 startButton.addEventListener("click",start);
-
-var question = document.getElementById("questionsDiv");
+// not sure if line 5 and line 8 are working as intended 
 
 
 
@@ -62,22 +61,31 @@ let questionsArray = [
     function start(){
     startButton.classList.add("hide")
      //start the timer
-        startTime();  //show the next question  nextQuestion();
+          
+    
+        //startTime();  show the next question  nextQuestion();
     };
+
+    function start(){
+        var  = setInterval(alertFunc, 1000) =>{
+            
+        }, interval);
+    }
+
     function end(){
     //save score to local storage  //remove question off the screen  //stop the timer  //save score screen
     }
     ;function timer(){
- 
-    }
-    function startTimer(){
-
-    }
     
-    function nextQuestion(){
-       queston.classList.add("questionsArray")
-       console.log("questions")
     }
+    // function startTimer(){
+
+    // }
+    
+    // function nextQuestion(){
+    //    queston.classList.add("questionsArray")
+    //    console.log("questions")
+    // }
     ;function saveHighScore(){
 
     };
