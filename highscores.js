@@ -1,10 +1,12 @@
 // Michael Swigart Homework Code Quiz
 //   Declared const 
-const scores  = document.getElementById("#score")
+var scores  = document.getElementById("#score")
 
-const clear  = document.getElementById("#clear")
+var clear  = document.getElementById("#clear")
 
-const goback  = document.getElementById("#goBack")
+var goback  = document.getElementById("#goBack")
+goback.addEventListener("click",mainMenu)
 
-
-
+function mainMenu(){
+    
+};

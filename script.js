@@ -1,10 +1,16 @@
+startTime 
+var startButton = document.getElementById("startTime");
+startButton.addEventListener("click",start);
+
+var question = document.getElementById("questionsDiv");
+
+
+
 // questions array
-let questions = [
+let questionsArray = [
 
     {
         question : "what does HTML stand for?" ,
-
-        // imgSrc : "",
 
         choiceA : "HighText Machine Language",
     
@@ -13,13 +19,10 @@ let questions = [
         choiceC : "HyperText Markup Language",
 
         correct : "HyperText Markup Language"
-
     
     },{
 
         question : "How to create an unordered list (a list with the list items in bullets) in HTML?" ,
-
-        // imgSrc : "",
 
         choiceA : "<ul>",
     
@@ -29,15 +32,9 @@ let questions = [
 
         correct : "<ul>"
 
-    
-
-
-
     },{
 
         question : " HTML tags are enclosed in-" ,
-
-        // imgSrc : "",
 
         choiceA : "! and ?",
     
@@ -47,16 +44,9 @@ let questions = [
 
         correct : "< and >"
 
-    
-
-
-
-
     },{
     //    could not use "" because of errors
         question : "How to create a hyperlink in HTML?" ,
-
-        // imgSrc : "",
 
         choiceA : "<a href = www.javatpoint.com> javaTpoint.com </a>",
     
@@ -66,20 +56,37 @@ let questions = [
 
         correct : "<a href = www.javatpoint.com> javaTpoint.com </a>"
 
+    }];
+
+
+    function start(){
+    startButton.classList.add("hide")
+     //start the timer
+        startTime();  //show the next question  nextQuestion();
+    };
+    function end(){
+    //save score to local storage  //remove question off the screen  //stop the timer  //save score screen
+    }
+    ;function timer(){
+ 
+    }
+    function startTimer(){
+
+    }
     
+    function nextQuestion(){
+       queston.classList.add("questionsArray")
+       console.log("questions")
+    }
+    ;function saveHighScore(){
 
-}
-
-
-];
-
-const score
-const questionsIndex
-
-
-
-
-for (let index = 0; index <questionsIndex.length; index++) {
-    const question = question[index];
+    };
+   
     
-}
+        
+       
+        
+      
+     
+     
+     
