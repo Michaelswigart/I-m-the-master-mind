@@ -65,12 +65,12 @@ let questionsArray = [
     
         //startTime();  show the next question  nextQuestion();
     };
-
-    function start(){
-        var  = setInterval(alertFunc, 1000) =>{
+       // this is the one you wnat to work on form me 
+    // function start(){
+    //     var  = setInterval(alertFunc, 1000) =>{
             
-        }, interval);
-    }
+    //     }, interval);
+   // }
 
     function end(){
     //save score to local storage  //remove question off the screen  //stop the timer  //save score screen
