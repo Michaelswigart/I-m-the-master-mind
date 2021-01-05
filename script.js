@@ -1,46 +1,88 @@
-// Javascript
+// Javascript elements 
+var questions = [
+    {
+      question: 'what is 2+2',
+      answers: ['5', '6', '13', '4'],
+      correctAnswer: '4'
+    },
+    {
+      question: 'What color is the sky?',
+      answers: ['blue', 'gray', 'black', 'orange'],
+      correctAnswer: 'blue'
+    }
+    // questons more of them
+  ];
+var currentQuestionIndex = 0;
+var time = questions.length * 15;
 var questionIndex = 0;
 var answers = document.querySelectorAll('.answer');
 var welcomeSec = document.querySelector('#welcomeSection');
 var quizSec = document.querySelector('#quizSection');
+var timerEl = document.getElementById("time");
+var feedbackEl = document.getElementById("feedback");
+
+
+
+
+
 var startBtn = document.querySelector('#startButton');
 
 
+//questions
 startBtn.addEventListener("click", startQuiz);
-var questions = [
-  {
-    question: 'What is 2 + 2?',
-    answers: ['5', '6', '13', '4'],
-    correctAnswer: 3
-  },
-  {
-    question: 'What color is the sky?',
-    answers: ['blue', 'gray', 'black', 'orange'],
-    correctAnswer: 0
-  }
-];
+
 
 function startQuiz() {
-welcomeSec.classList.add('hidden'); // hides the Welcome section
-quizSec.classList.remove('hidden'); // display/shows the Quiz section
-}
+welcomeSec.classList.add('hidden');
+var timerId = setInterval(clockTick, 1000);
+// hides the Welcome section
+quizSec.classList.remove('hidden');
+timerEl.textContent = time;
+// display/shows the Quiz section
 
+}
+function clockTick(){
+    time --; 
+    timerEl.textContent = time;
+}
 function startTimer() {
 }
+// need to make loop and make a button set atrb
 
 function showQuestion() {
   var questionEl = document.querySelector('.question');
   var ans1 = document.querySelector('#answer1');
-  var questionObj = questions[questionIndex];
-  questionEl.textContent = questionObj.question;
-  ans1.textContent = questionObj.answers[0];
-  ans1.dataset('correct') = (3 === questionObj.correctAnswer)
-  ans3.addEventListner('click', function() {
+  var currentQuestion = questions[currentQuestionIndex]
+//   var questionObj = questions[questionIndex];
+  questionEl.textContent = currentQuestion.question;
+  questions[questionIndex].answers.forEach(function(ans, i){
+    var btn = document.createElement("button");
+    btn.setAttribute("value", ans);
+    btn.textContent = ans;
+    btn.onclick = clickon;
+    ans1.append(btn);
   })
+  //ans1.textContent = questionObj.answers[0];
+//   ans1.dataset('correct') = (3 === questionObj.correctAnswer)
+//   ans3.addEventListner('click', function() {
+//   })
   questionIndex++;
 }
-// var timerId = setInterval(<FUNCTION TO CALL>, 1000);
-// clearInterval(timerId); // Stops the process
+function clickon(){
+    console.log(this.value)
+    if (this.value === questions[currentQuestionIndex].correctAnswer) {
+        console.log("awnser")
+        feedbackEl.textContent = "correct";
+    } else {
+        time -= 15;
+        timerEl.textContent = time;
+        feedbackEl.textContent = "wrong";
+    }
+}
+showQuestion()
+
+
+// clearInterval(timerId);  Stops the process
 
 
 
@@ -54,7 +96,7 @@ function showQuestion() {
 
 
 // // questions array
-// let questionsArray = [
+//  questions = [
 
 //     {
 //         question : "what does HTML stand for?" ,
