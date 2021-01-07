@@ -34,10 +34,10 @@ startBtn.addEventListener("click", startQuiz);
 
 
 function startQuiz() {
-welcomeSec.classList.add('hidden');
+  welcomeSec.setAttribute("class", "hidden");
 var timerId = setInterval(clockTick, 1000);
 // hides the Welcome section
-quizSec.classList.remove('hidden');
+quizSec.setAttribute("class", "show");
 timerEl.textContent = time;
 // display/shows the Quiz section
 
@@ -45,7 +45,7 @@ timerEl.textContent = time;
 function clockTick(){
     time --; 
     timerEl.textContent = time;
-    if ( timer <= 0 ) {
+    if ( time <= 0 ) {
       quizSec.classList.add("hidden");
     }
 }
