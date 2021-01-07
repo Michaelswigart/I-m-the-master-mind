@@ -20,7 +20,8 @@ var welcomeSec = document.querySelector('#welcomeSection');
 var quizSec = document.querySelector('#quizSection');
 var timerEl = document.getElementById("time");
 var feedbackEl = document.getElementById("feedback");
-
+// add stop timer
+// var stopTimerEl = document.getElementById("stopTimer"); 
 
 
 
@@ -44,9 +45,16 @@ timerEl.textContent = time;
 function clockTick(){
     time --; 
     timerEl.textContent = time;
+    if ( timer <= 0 ) {
+      quizSec.classList.add("hidden");
+    }
 }
-function startTimer() {
-}
+// add stop function
+// function stopTimer() {
+//   time --;
+//   stopTimerEl
+//   console.log("stopTimer");
+// }
 // need to make loop and make a button set atrb
 
 function showQuestion() {
